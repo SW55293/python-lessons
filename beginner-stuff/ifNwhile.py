@@ -19,3 +19,14 @@ else:
     print('Veg Menu')
 
 ############ While Loops
+score = 100
+num = 0 
+while num < score:
+    print(num)
+    num += 1
+
+# Print only even
+while num < score:
+    if num % 2 == 0:
+        print(num)
+    num += 1
