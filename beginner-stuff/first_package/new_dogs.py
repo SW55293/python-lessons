@@ -1,5 +1,4 @@
-#When you create a brand new class you need an init function 
-class Dogs:
+class Dogs_2:
     #class level attribute
     mammal = 'yes'
 
@@ -24,21 +23,3 @@ class Dogs:
     @staticmethod
     def is_fast(speed = 'very slow'):
         return f'speed is {speed}'
-
-
-dog_a = Dogs('Annoying', 50, 'black', '?')
-dog_b = Dogs('Juno', 100, 'dark brown', 'pitbull')
-
-#print dog a & b
-print(f"Dog A's name is {dog_a.name}, weight = {dog_a.weight}, color = {dog_a.color}, and breed = {dog_a.breed} ")
-
-print(f"Dog B's name is {dog_b.name}, weight = {dog_b.weight}, color = {dog_b.color}, and breed = {dog_b.breed} ")
-
-print(Dogs.mammal)
-print(dog_a.kills_cats())
-
-print(Dogs.commons())
-
-print(Dogs.is_fast())
-#override what is_fast has set for speed
-print(Dogs.is_fast('speed is very very fast'))
