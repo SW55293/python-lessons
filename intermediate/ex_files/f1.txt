@@ -1,0 +1,14 @@
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 957 bytes | 957.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/SW55293/python-lessons.git
+   54920e5..b033e1a  HEAD -> main
+   [main b033e1a] intermediate stuff
+ 5 files changed, 34 insertions(+)
+ delete mode 100644 beginner-stuff/lambdas.py
+ create mode 100644 intermediate/decorators.py
+ rename {beginner-stuff => intermediate}/filter.py (100%)
+ create mode 100644 intermediate/lambdas.py
+ rename {beginner-stuff => intermediate}/maps.py (100%)
