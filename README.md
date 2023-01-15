@@ -4,7 +4,7 @@ Abstract:xxx
 ## Papar Information
 - Title:  `paper name`
 - Authors:  `A`,`B`,`C`
-- Preprint: [https://arxiv.org/abs/xx]()
+- Python Docs: [https://docs.python.org/3/]()
 - Full-preprint: [paper position]()
 - Video: [video position]()
 

@@ -1,5 +1,24 @@
 colors = {"blue": "Stephanie", "red": "alyssah"}
 
+#another example of a dictionary
+dictionary_type_2 = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(dictionary_type_2)
+
+
+#yet another example of a dictionary 
+#the dict() constructor
+
+dict_example = dict(
+  name = "Stephanie",
+  age = 100,
+  car = "yes",
+  house = "no"
+)
+
 #return the persons name for given color.. the color is the key
 #so you have to give it a color or you'lll get and error
 print(colors["blue"])
