@@ -48,3 +48,11 @@ while True:
 
 
 favorites(fav_food)
+
+
+# dictionary = [key | value]
+
+# so when you say dictionary["dog"] = "potato"
+# you get
+# dictionary = ["dog" | "potato"] 
+# and this is dictionary["key"] = "value"
