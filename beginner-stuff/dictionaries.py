@@ -11,7 +11,6 @@ print(dictionary_type_2)
 
 #yet another example of a dictionary 
 #the dict() constructor
-
 dict_example = dict(
   name = "Stephanie",
   age = 100,

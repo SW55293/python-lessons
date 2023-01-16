@@ -15,4 +15,3 @@ list_of_numbers = [2, 8, 9, 90]
 target_number = 10 
 
 print(twoSum_ex1(list_of_numbers, target_number))
-
