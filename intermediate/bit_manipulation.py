@@ -80,6 +80,7 @@ def adding_without_plus(a, b):
 
         b = carry << 1
         print(f'carry = {carry}, a = {a}, b = {b}')
+        print()
     return a
 
-print(adding_without_plus(3,7))
+print(adding_without_plus(100,100))
