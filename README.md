@@ -1,7 +1,7 @@
 Title
 ===
 Abstract:xxx
-## Papar Information
+## Information
 - Title:  `paper name`
 - Authors:  `A`,`B`,`C`
 - Python Docs: [https://docs.python.org/3/]()
