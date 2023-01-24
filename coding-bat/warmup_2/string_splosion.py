@@ -36,6 +36,8 @@ print(string_splosion('Bad'))
 On each iteration, add the substring of the characters 0..s
   
 string_splosion('Code') →   'CCoCodCode' 
+
+
 C
 CCo
 CCoCod
