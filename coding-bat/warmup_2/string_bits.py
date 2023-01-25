@@ -29,5 +29,17 @@ print(string_bits('hxaxpxpxy'))
 
 """
 When a problem wants you to skip every other one
-think about modulos
+think about modulos/remainder
+
+Think of modulus as
+example:
+5 % 2  // 5 = x and 2 = y
+
+x - (x/y) * y //here the division portion throws remainders out the window so dont worry about them ignore basically
+so
+5 - (5/2) * 2
+
+5 - (2) * 2
+5 - 4 = 1
+answer=1
 """
