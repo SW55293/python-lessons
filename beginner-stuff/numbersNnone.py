@@ -18,3 +18,10 @@ print(8**2)
 #Storing value to a variable
 age = 60
 print(age)
+
+# None type
+nothing_here = None 
+
+# there are times where needing to have a data type but nothing stored will be useful
+# thats where you can use None
+ 
