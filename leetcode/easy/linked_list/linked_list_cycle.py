@@ -1,3 +1,10 @@
+# Pattern          = Two Pointer
+# Time Complexity  = 
+# Space Complexity = 
+"""
+Input1 = head: ListNode
+return type = bool
+"""
 class ListNode(object):
     def __init__(self, x):
         self.val = x
@@ -5,10 +12,7 @@ class ListNode(object):
 
 class Solution(object):
     def hasCycle(self, head):
-        """
-        :type head: ListNode
-        :return type: bool
-        """
+        
         slow_pointer = head
         fast_pointer = head
 

@@ -1,6 +1,11 @@
-#  Find the numbers that up to the Target number.
-#  If found return the indices of the two numbers that
-#  add up to that target number
+# Pattern          = Sliding Window
+# Time Complexity  = 
+# Space Complexity = 
+"""
+Input1 = nums: List[int]
+Input2 = target: int
+return type = List[int]
+"""
 
 def twoSum_ex1(nums, target):
     dictionary = {}
