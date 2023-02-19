@@ -2,6 +2,12 @@
 # Function may or may not have a return value
 # You can have multiple return objects. ex: return list1, list2
 
+# When passing in mutable data types such as lists, array, dictionaries ..
+# to other functions, the calling functions only have the refernece to the place
+# where that data is stored, they dont duplicate that data or make a copy
+# for themselves. they change the original data
+
+
 
 def input_from_user():
     return input('-> ')
