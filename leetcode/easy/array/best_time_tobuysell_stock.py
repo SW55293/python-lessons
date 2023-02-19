@@ -19,5 +19,13 @@ class Solution(object):
                 max_profit = max(max_profit, potential_profit)
             else:
                 buy = sell
-            sell = sell + 1 #this gave me an error when it was in the else block
+            sell = sell + 1 #this gave me an error when it was in the else block. Look for answer below
         return max_profit
+
+# Answer to the error:
+# I got an error because the sell counter wasnt updating
+# it will only update when prices[buy] was greater than prices[sell]
+# because thats when the else block would run. We need the sell
+# counter to always update after ever go of the code no matter what.
+# This will keep the code checking the next new sell price. 
+# 

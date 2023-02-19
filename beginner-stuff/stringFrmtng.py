@@ -15,6 +15,7 @@ print('number one: {0:.2f} and number 2 is: {1:.2f}'.format(num,num2))
 
 
 #using f-strings
+#run using python3
 print('Second way')
 print(f'number 1 = {num} and number 2 = {num2}')
 
