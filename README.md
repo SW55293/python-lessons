@@ -1,36 +1,5 @@
 Title
 ===
-Abstract:xxx
-## Information
-- Title:  `paper name`
-- Authors:  `A`,`B`,`C`
-- Python Docs: [https://docs.python.org/3/]()
-- Full-preprint: [paper position]()
-- Video: [video position]()
-
-## Install & Dependence
-- python
-- pytorch
-- numpy
-
-
-## Use
-- for train
-  ```
-  python train.py
-  ```
-- for test
-  ```
-  python test.py
-  ```
-## Pretrained model
-| Model | Download |
-| ---     | ---   |
-| Model-1 | [download]() |
-| Model-2 | [download]() |
-| Model-3 | [download]() |
-
-
 ## Directory Hierarchy
 ```
 |—— beginner-stuff
@@ -61,14 +30,13 @@ Abstract:xxx
   - Tuple
 
 
-### Hyper parameters
+### Object Oriented Programming
 ```
+Abstraction 
+Encapsulation
+Inheritance
+Polymorphism
 ```
-## References
-- [paper-1]()
-- [paper-2]()
-- [code-1](https://github.com)
-- [code-2](https://github.com)
   
 ## License
 
