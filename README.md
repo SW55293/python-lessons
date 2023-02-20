@@ -11,33 +11,6 @@ Title
 |    |—— stringFrmtng.py
 |    |—— strings.py
 ```
-
-### Notes
-- Mutable
-  - Objects
-  - List/Arrays
-  - Linked Lists
-  - Maps/Dictionaries
-  - Functions & Classes
-  - Sets
-  - etc...
-
-- Immutable (Primative Values)
-  - Ints
-  - Strings
-  - Booleans
-  - Float
-  - Tuple
-
-
-### Object Oriented Programming
-```
-Abstraction 
-Encapsulation
-Inheritance
-Polymorphism
-```
-  
 ## License
 
 ## Citing
