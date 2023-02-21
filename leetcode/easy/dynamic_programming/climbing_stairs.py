@@ -1,4 +1,4 @@
-# Pattern          = 
+# Pattern          = Dynamic Programming Bottom Up Approach
 # Time Complexity  = O(n)
 # Space Complexity = O(1)
 """
