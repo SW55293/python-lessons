@@ -2,9 +2,9 @@
 # Time Complexity  = 
 # Space Complexity = 
 """
-Input1 = nums: List[int]
-Input2 = target: int
-return type = List[int]
+Input1 = nums(List[int]) a list of integers
+Input2 = target(int) an integer
+Return type = A (List[int]) list of integers 
 """
 
 def twoSum_ex1(nums, target):
