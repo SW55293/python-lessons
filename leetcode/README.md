@@ -26,3 +26,9 @@ Encapsulation
 Inheritance
 Polymorphism
 ```
+### Dynamic Programming
+```
+1. Top Down Approach
+2. Bottom Up Approach
+```
+

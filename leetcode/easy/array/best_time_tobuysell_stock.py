@@ -1,9 +1,9 @@
 # Pattern          = Sliding Window
-# Time Complexity  = 
-# Space Complexity = 
+# Time Complexity  = O(n)
+# Space Complexity = O(1)
 """
-Input1 = prices: List[int]
-return type = int
+Input1 = prices(List[int]) a list of integers
+Return type = An (int) integer
 """
 
 class Solution(object):
@@ -28,4 +28,4 @@ class Solution(object):
 # because thats when the else block would run. We need the sell
 # counter to always update after ever go of the code no matter what.
 # This will keep the code checking the next new sell price. 
-# 
+#
