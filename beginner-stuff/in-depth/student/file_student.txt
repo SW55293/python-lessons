@@ -1,0 +1,3 @@
+steph,walker:python,chem,algebra
+elijah,walker:art,cooking,dogs
+juno,walker:eats,food,meat
