@@ -24,6 +24,31 @@ class Student:
         else:
             print(f'{course} not found in {self.first}s course list')
 
+    def find_in_file(self, filename):
+        with open(filename) as printing:
+            for every_line in printing:
+                print(every_line.strip())
+                f_name, l_name, course_info = Student.student_record(every_line.strip())
+                read_in_student_data = Student(f_name, l_name, course_info)
+                if self == read_in_student_data:
+                    return True
+            return False
+    
+    def read_from_file(self, filename):
+        pass
+
+    #when you add a function that is different from the rest of
+    #your code but you still need it. its best to add staticmethod above
+    @staticmethod
+    def student_record(every_line):
+        every_line = every_line.split(':')
+        f_name, l_name = every_line[0].split(',')
+        course_info = every_line[1].split(',')
+        return f_name, l_name, course_info
+
+    def __eq__(self, comparison):
+        return self.first == comparison.first and self.last == comparison.last
+        
     def __len__(self):
         return len(self.courses)
 
@@ -85,6 +110,14 @@ print('----------------Calling Repr Method--------------------------')
 #Calling dir to see the different buil-in methods and testing some
 print(repr(steph))
 print(repr(elijah))
+
+
+print('----------------Find and Read In A File--------------------------')
+filename = 'student_data.txt'
+s1 = Student('dog', 'barker', ['food', 'annoying', 'smelly'])
+print(s1.find_in_file(filename))
+print(s1.read_from_file(filename))
+
 
 
 '''
