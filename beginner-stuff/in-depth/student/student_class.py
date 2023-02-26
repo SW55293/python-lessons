@@ -28,23 +28,36 @@ class Student:
         with open(filename) as printing:
             for every_line in printing:
                 print(every_line.strip())
-                f_name, l_name, course_info = Student.student_record(every_line.strip())
-                read_in_student_data = Student(f_name, l_name, course_info)
+                first, last, courses = Student.student_record(every_line.strip())
+                read_in_student_data = Student(first, last, courses)
                 if self == read_in_student_data:
                     return True
             return False
     
     def read_from_file(self, filename):
-        pass
+        if self.find_in_file(filename):
+            return 'Record exists in the file'
+        else:
+             adding_to_record = Student.write_data(self.first, self.last, self.courses)
+             with open(filename, 'a+') as write:
+                write.write('\n' + adding_to_record + '\n') 
+                
 
     #when you add a function that is different from the rest of
     #your code but you still need it. its best to add staticmethod above
     @staticmethod
     def student_record(every_line):
         every_line = every_line.split(':')
-        f_name, l_name = every_line[0].split(',')
-        course_info = every_line[1].split(',')
-        return f_name, l_name, course_info
+        first, last = every_line[0].split(',')
+        courses = every_line[1].split(',')
+        return first, last, courses
+#This works along side read_from_file to write to the file if the record is not 
+#in there
+    @staticmethod
+    def write_data(first, last, courses):
+        full_name = first + ' ' + last
+        courses = ','.join(courses)
+        return full_name + ':' + courses
 
     def __eq__(self, comparison):
         return self.first == comparison.first and self.last == comparison.last
@@ -118,6 +131,19 @@ s1 = Student('dog', 'barker', ['food', 'annoying', 'smelly'])
 print(s1.find_in_file(filename))
 print(s1.read_from_file(filename))
 
+#reading from file
+print(s1.find_in_file(filename))
+
+#write to it if it doesnt exist
+s2 = Student('stephen', 'sleey', ['python', 'just'])
+# print(s2.find_in_file(filename))
+# print(s2.read_from_file(filename))
+#commented out because I have an error somewhere 
+
+print('----------------Calling the help() function--------------------------')
+#this show what a class has to offer and what methods and functions are
+#available to use
+print(help(s2))
 
 
 '''
