@@ -61,5 +61,5 @@ def climbStairs(n):
 
 
 
-print(climbingStairs(40))
-print(climbStairs(40))
+print(climbingStairs(5))
+print(climbStairs(5))
