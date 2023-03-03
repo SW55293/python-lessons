@@ -13,9 +13,14 @@ def climbingStairs(n):
     n3 = 3
 
     for _ in range(n-3):
+        print('n =', n)
+        print('n-3 =', n-3)
         temp = n3
+        print('temp =', temp)
         n3 = n2 + n3
+        print('n3 =', n3)
         n2 = temp
+        print('n2 =', n2)
     return n3
 
 
@@ -62,4 +67,4 @@ def climbStairs(n):
 
 
 print(climbingStairs(5))
-print(climbStairs(5))
+# print(climbStairs(5))
