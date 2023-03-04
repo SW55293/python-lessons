@@ -84,3 +84,17 @@ def adding_without_plus(a, b):
     return a
 
 print(adding_without_plus(100,100))
+
+'''
+Modulus Method
+To find 1 mod 2 using the Modulus Method, we first find the highest multiple of the Divisor (2) that is equal to or less than the Dividend (1).
+
+Then, we subtract the highest Divisor multiple from the Dividend to get the answer to 1 modulus 2 (1 mod 2):
+
+Multiples of 2 are 0, 2, 4, 6, etc. and the highest multiple of 2 equal to or less than 1 is 0. Therefore, to get the answer:
+
+1 - 0 = 1
+
+So basically we need to look at the multiples of that number that are either equal or less
+than the preceding and subtract it
+'''
