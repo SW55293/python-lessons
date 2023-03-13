@@ -8,16 +8,19 @@ class Solution(object):
         # Run a loop till curr points to NULL
         while curr:
             # Initialize next pointer as the next pointer of curr
-            next = curr.next
-            # Now assign the prev pointer to curr’s next pointer
+            temp_next = curr.next
+            # Assign curr.next to what prev current value is
             curr.next = prev
             # Assign curr to prev, next to curr
             prev = curr
-            curr = next
+            curr = temp_next
         return prev       # Return the prev pointer to get the reverse linked list
     
 '''
 We are keeping 3 pointer basically
 with one of them only being visible 
 inside of the while loop.
+
+We keep track of the prev pointer previous value/number before moving it forward
+We keep track of curr next 
 '''
