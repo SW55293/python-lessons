@@ -2,8 +2,8 @@
 # Time Complexity  = O(n)
 # Space Complexity = O(1)
 """
-Input1 = n(int) a integer
-Return type = An (int) integer
+Input1 = 1 Integer
+Return type = 1 Integer
 """
 
 def climbingStairs(n):
