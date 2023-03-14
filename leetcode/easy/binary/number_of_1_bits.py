@@ -1,15 +1,25 @@
+# Pattern          = Mod and Bit shift
+# Time Complexity  = O(n)
+# Space Complexity = O(1)
+"""
+Input1 = Bit Integer
+Return type = Integer
+"""
+
 def count_1s(n):
     counter = 0
 
     # will run until it reaches the end of the int
     while n:
          #this will add 1 to the counter every time a 1 is moded by 2
-        counter += n % 2
+        counter += n % 2  #counter = counter + (n%2)
          #the bits are being looked at 1 by 1 so once we've looked at a number/bit 
          #then shift right to get rid of it and look at the next number
         n = n >> 1
     return counter
 
+
+#Example 2
 def  countSetBits(n):
     count = 0
     while (n):
