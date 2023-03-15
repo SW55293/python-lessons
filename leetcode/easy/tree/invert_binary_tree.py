@@ -1,3 +1,11 @@
+# Pattern          = Recursion
+# Time Complexity  = O(n)
+# Space Complexity = O(1)
+"""
+Input 1     = Tree Node
+Return Type = Tree Node
+"""
+
 # Definition for a binary tree node.
 class TreeNode(object):
      def __init__(self, val=0, left=None, right=None):
