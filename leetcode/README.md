@@ -33,7 +33,7 @@ Polymorphism
 ```
 
 ### Time Complexity
-# Things to take into consideration
+#### Things to take into consideration
 ```
 - Operations
 - Comparisons
@@ -43,7 +43,7 @@ Polymorphism
 ```
 
 ### Space Complexity
-# Things to take into consideration
+#### Things to take into consideration
 ```
 - Variables
 - Data Structures
