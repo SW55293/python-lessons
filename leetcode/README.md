@@ -32,3 +32,21 @@ Polymorphism
 2. Bottom Up Approach
 ```
 
+### Time Complexity
+# Things to take into consideration
+```
+- Operations
+- Comparisons
+- Loops
+- Pointer References
+- Function Calls
+```
+
+### Space Complexity
+# Things to take into consideration
+```
+- Variables
+- Data Structures
+- Allocations
+- Function Calls
+```

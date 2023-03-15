@@ -36,3 +36,4 @@ def containsDuplicate2(nums):
 # 3
 def containsDuplicate3(nums):
     return len(set(nums)) != len(nums)
+    #or len(nums) > len(set(nums)) 
