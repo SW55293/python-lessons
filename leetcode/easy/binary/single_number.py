@@ -1,4 +1,3 @@
-
 # Pattern          = Bit Operation and XOR
 # Time Complexity  = O(n)
 # Space Complexity = O(1)
