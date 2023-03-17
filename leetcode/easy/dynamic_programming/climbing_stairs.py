@@ -6,6 +6,8 @@ Input1 = 1 Integer
 Return type = 1 Integer
 """
 
+
+
 def climbingStairs(n):
     if n <= 3:
         return n
