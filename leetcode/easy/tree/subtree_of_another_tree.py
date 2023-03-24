@@ -1,22 +1,26 @@
-
+# Pattern          = Recursion
+# Time Complexity  = O(n * n)
+# Space Complexity = O(n)
+"""
+Input1      = root TreeNode
+Input2      = subRoot TreeNode
+Return type = Boolean
+"""
 def isSubtree(root, subRoot):
+
+    #we use a separate function to do the comparing
+    def compareTree(r,s):
+        if not r and not s:           #if both nodes are null/empty then they are the same
+            return True
+        if r and s and r.val==s.val:  #if the nodes are not empty then check there values
+            return compareTree(r.left,s.left) and compareTree(r.right,s.right) 
+        return False                  #return false if none of the above is true          
     
-                # Traversing throught whole tree (root) if root matches the subroot go in same function and check if both are same then return True or if Tree value touches to Null return False
-            if root == None:  # If root Touches to Null value directly return False
-                return False
-            if same(root , subRoot)== True:  # if same function returns True return True itself
-                return True 
-                 # go inside the tree and call recursively root.left and root.right and we are taking 'or' of them because even if one value comes out to be true then we will return True itself
-            return (isSubtree(root.left , subRoot) or isSubtree(root.right , subRoot))
-    
-def same(root , subroot):
-            # if both root and subroot become Null at same time then we return True and whole answer would be true 
-            if root == None and subroot == None:
-                return True
-            # if root value does'nt match with subroot value then we return False or even if root value becomes null and subroot is not null and viceversa is true then it will still return False
-            if root== None or subroot == None or root.val != subroot.val :
-                return False
-            # Now we call the function recursively to give root and subroot childrens to see if it matches or not
-            return (same(root.left, subroot.left) and same(root.right , subroot.right))
+    if not subRoot:                 #if subroot is null return true
+        return True
+    if not root:                    #if root is null return false
+        return False
+    if compareTree(root,subRoot):   #take both nodes and compare them using other function
+        return True
         
-    # Same function to calculate the root and Subroot
+    return isSubtree(root.left,subRoot) or isSubtree(root.right,subRoot)

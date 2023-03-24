@@ -13,7 +13,6 @@ class TreeNode(object):
         self.left = left
         self.right = right
 
-#class Solution(object):
 def invertTree(self, root):
         """
         :type root: TreeNode
