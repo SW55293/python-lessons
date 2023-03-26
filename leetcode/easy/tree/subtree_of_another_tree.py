@@ -63,13 +63,31 @@ def isSubtree(root, subRoot):
         
     return isSubtree(root.left,subRoot) or isSubtree(root.right,subRoot)
 
+compare func 
+('r val = ', TreeNode{val: 3, left: TreeNode{val: 4, left: TreeNode{val: 1, left: None, right: None}, right: TreeNode{val: 2, left: None, right: None}}, right: TreeNode{val: 5, left: None, right: None}})
+('s val = ', TreeNode{val: 4, left: TreeNode{val: 1, left: None, right: None}, right: TreeNode{val: 2, left: None, right: None}})
+compare func
+('r val = ', TreeNode{val: 4, left: TreeNode{val: 1, left: None, right: None}, right: TreeNode{val: 2, left: None, right: None}})
+('s val = ', TreeNode{val: 4, left: TreeNode{val: 1, left: None, right: None}, right: TreeNode{val: 2, left: None, right: None}})
+compare func
+('r val = ', TreeNode{val: 1, left: None, right: None})
+('s val = ', TreeNode{val: 1, left: None, right: None})
+compare func
+('r val = ', None)
+('s val = ', None)
+compare func
+('r val = ', None)
+('s val = ', None)
+compare func
+('r val = ', TreeNode{val: 2, left: None, right: None})
+('s val = ', TreeNode{val: 2, left: None, right: None})
+compare func
+('r val = ', None)
+('s val = ', None)
+compare func
+('r val = ', None)
+('s val = ', None)
+('comapreTree input = ', TreeNode{val: 4, left: TreeNode{val: 1, left: None, right: None}, right: TreeNode{val: 2, left: None, right: None}}, TreeNode{val: 4, left: TreeNode{val: 1, left: None, right: None}, right: TreeNode{val: 2, left: None, right: None}})
 
-('not r & s', TreeNode{val: 4, left: TreeNode{val: 1, left: None, right: None}, right: TreeNode{val: 2, left: None, right: None}}, TreeNode{val: 4, left: TreeNode{val: 1, left: None, right: None}, right: TreeNode{val: 2, left: None, right: None}})
-('not r & s', TreeNode{val: 1, left: None, right: None}, TreeNode{val: 1, left: None, right: None})
-('comparing', None, None)
-('comparing', None, None)
-('not r & s', TreeNode{val: 2, left: None, right: None}, TreeNode{val: 2, left: None, right: None})
-('comparing', None, None)
-('comparing', None, None)
-('comapreTree', TreeNode{val: 4, left: TreeNode{val: 1, left: None, right: None}, right: TreeNode{val: 2, left: None, right: None}}, TreeNode{val: 4, left: TreeNode{val: 1, left: None, right: None}, right: TreeNode{val: 2, left: None, right: None}})
+
 '''
