@@ -1,3 +1,12 @@
+# Pattern          = Comparison
+# Time Complexity  = O
+# Space Complexity = O
+"""
+Input1 = prices(List[int]) a list of integers
+Return type = An (int) integer
+"""
+
+
 def canAttendMeetings(intervals):
         intervals.sort(key = lambda x: x.end)
         for i in range(1, len(intervals)):
@@ -6,7 +15,7 @@ def canAttendMeetings(intervals):
 
 # ------------------------------------------
 
-def canAttendMeetings(intervals: List[List[int]]) -> bool:
+def canAttendMeetings(intervals):
     intervals.sort()
 
     for i in range(1, len(intervals)):
@@ -15,29 +24,26 @@ def canAttendMeetings(intervals: List[List[int]]) -> bool:
 
     return True
 
-# ------------------------------------------
 
-def canAttendMeetings(intervals):
-        intervals.sort(key=lambda i: i[0])
 
-        for i in range(1, len(intervals)):
-            i1 = intervals[i - 1]
-            i2 = intervals[i]
+# Example
+l = [[30,20000], [7,100], [43,0]]
+l.sort()
+print(l)
 
-            if i1[1] > i2[0]:
-                return False
-        return True
+for x in range(1, len(l)):
+    print(l[x-1][1])
+    if l[x-1][1] > l[x][0]:
+        print('False')
+print('True')
 
-# ------------------------------------------
 
-def canAttendMeetings(intervals):
-        """
-        :type intervals: List[List[int]]
-        :rtype: bool
-        """
-        intervals.sort(key=lambda x: x[0])
+'''
+sorted = [[7, 100], [30, 20000], [43, 0]]
+[x-1][1]                          | [x][0]      
+1 = [0][1] -> [7,100]   [100]     | [1][0] = [7,100]   [7] 
+2 = [1][1] -> [30,2000] [2000]    | [2][0] = [30,2000] [30]
+3 = [2][1] -> [43,0]    [0]       | [3][0] = [43,0]    [43]
 
-        for i in xrange(1, len(intervals)):
-            if intervals[i][0] < intervals[i-1][1]:
-                return False
-        return True
+compares ending times per block with starting times 
+'''
