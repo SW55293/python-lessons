@@ -40,3 +40,30 @@ def cloneGraph(node):
 
 
 
+'''Explanation for dumb bitches
+This code is a Python implementation of a depth-first search algorithm for cloning an undirected 
+graph represented as a Node class. The Node class is assumed to have a value (stored in the val attribute)
+and a list of neighbors (stored in the neighbors attribute), which contains other nodes that are directly
+connected to the node.
+
+The cloneGraph function takes a single argument node, which is the starting node of the graph to be cloned.
+If the node argument is None, then the function simply returns None.
+
+The function then initializes an empty dictionary called visited, which will be used to keep track of the 
+nodes that have been visited during the depth-first search.
+
+The dfs function is a recursive helper function that takes a single argument node, which is a node in the 
+original graph. The function first checks if node has already been visited by looking up the node in the 
+visited dictionary. If the node has already been visited, the function simply returns the cloned version 
+of the node that was stored in the dictionary.
+
+If the node has not been visited yet, the function creates a new cloned node with the same value as the 
+original node, and adds it to the visited dictionary. The function then loops over the neighbors list of 
+the original node and recursively calls dfs on each neighbor, appending the cloned version of the neighbor
+to the neighbors list of the cloned node.
+
+Finally, the cloneGraph function calls dfs with the node argument and returns the cloned node.
+
+
+
+'''
