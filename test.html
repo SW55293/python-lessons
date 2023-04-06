@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Binary Number Right Shift</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  margin: 20px auto;
+}
+
+.binary-number {
+  width: 100px;
+  height: 100px;
+  background-color: #000000;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.right-shift-button {
+  width: 100px;
+  height: 30px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.right-shift-button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="binary-number">101</div>
+  <div class="right-shift-button">>> 1</div>
+</div>
+<script>
+var binaryNumber = document.querySelector('.binary-number');
+var rightShiftButton = document.querySelector('.right-shift-button');
+
+rightShiftButton.addEventListener('click', function() {
+  var binaryNumberValue = binaryNumber.innerText;
+  var rightShiftCount = parseInt(rightShiftButton.innerText, 10);
+  binaryNumber.innerText = binaryNumberValue.slice(0, -rightShiftCount) + binaryNumberValue.slice(-rightShiftCount);
+});
+</script>
+</body>
+</html>
