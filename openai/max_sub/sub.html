@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Max Subarray</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      /* CSS styles go here */
+    </style>
+  </head>
+  <body>
+    <h1>Max Subarray</h1>
+    <p>
+      Enter a list of integers separated by commas:
+      <input type="text" id="input" />
+      <button onclick="maxSubArray()">Calculate</button>
+    </p>
+    <p id="output"></p>
+    <script>
+      function maxSubArray() {
+    // Get the input value
+    const input = document.getElementById("input").value;
+  
+    // Parse the input as a list of integers
+    const nums = input.split(",").map((x) => parseInt(x.trim()));
+  
+    // Call the maxSubArray function and display the result
+    const result = document.getElementById("output");
+    result.innerText = "Max subarray sum: " + calculateMaxSubArray(nums);
+  }
+  
+  function calculateMaxSubArray(nums) {
+    let res = nums[0];
+    let total = 0;
+    for (let n of nums) {
+      total += n;
+      res = Math.max(res, total);
+      if (total < 0) {
+        total = 0;
+      }
+    }
+    return res;
+  }
+  
+    </script>
+  </body>
+</html>
