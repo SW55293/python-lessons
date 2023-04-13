@@ -21,3 +21,22 @@ print(add_without_sign(1, 4))
 # 0100
 # ----
 # 0101 = 5 
+
+'''
+The function uses a bitwise approach to perform addition of two numbers without using the '+' operator. 
+The bitwise operator "&" performs bitwise AND operation and "^" performs bitwise XOR operation.
+
+The function first checks if there is any carry from the previous addition by performing bitwise
+AND operation on the two integers "a" and "b". If there is any carry, it is stored in the variable 
+"carry". The value of "a" is then updated by performing bitwise XOR operation on "a" and "b". The value of 
+"b" is updated by shifting the value of "carry" to the left by one position using the bitwise operator "<<". 
+This is done to add the carry to the next significant bit.
+
+The process is repeated until there is no carry left. At this point, the value of "a" contains the sum of "a" and "b", 
+which is returned by the function.
+
+Overall, this function implements a binary addition algorithm using bitwise operations to calculate the sum of two
+integers without using the '+' operator.
+
+
+'''
