@@ -1,6 +1,30 @@
 #Add or Subtract two numbers without using the + plus or
 # - minus sign
 
+def sum_of_two(a,b):
+    bitShortener = 0xffffffff
+
+    while b & bitShortener > 0:
+          carry = (a & b) << 1 
+          a = a ^ b
+          b = carry
+    return (a & bitShortener) if b > 0 else a
+
+
+'''
+bitShortener will never change its value it will always be 32 1's
+
+in python ints are stored as 256 bits so we want to
+shorten that to use only 32 bits because we only need 32 bits
+in binary 0xffffffff = 11111111111111111111111111111111
+'''
+
+
+
+
+
+# =====================================================
+
 def add_without_sign(a, b):
 
     while b != 0:
@@ -8,8 +32,6 @@ def add_without_sign(a, b):
         a = a ^ b
         b = carry << 1
     return a
-
-
 print(add_without_sign(1, 4))
 
 #example
