@@ -20,3 +20,27 @@ def rob(nums):
            prev1 = prev2
            prev2 = temp
        return prev2 
+
+
+'''
+def rob(self, nums):
+
+    # Initialize `prev1` and `prev2` to 0.
+    prev1 = 0
+    prev2 = 0
+
+    # Iterate over the numbers in `nums`.
+    for n in nums:
+
+        # Calculate the maximum amount of money that can be robbed from the current house and the first house.
+        temp = max(n + prev1, prev2)
+
+        # Update `prev1` and `prev2` to reflect the new maximum amount of money that can be robbed from the first two houses.
+        prev1 = prev2
+        prev2 = temp
+
+    # Return `prev2`, which is the maximum amount of money that can be robbed from the entire sequence of houses.
+    return prev2
+
+
+'''
