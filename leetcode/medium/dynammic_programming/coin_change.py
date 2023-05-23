@@ -1,4 +1,13 @@
-def coinChange(self, coins, amount):
+# Pattern          = 
+# Time Complexity  = O(n)
+# Space Complexity = O(1)
+"""
+Input1 = Int List
+Input2 = Integer
+Return type = Int List
+"""
+
+def coinChange(coins, amount):
         """
         :type coins: List[int]
         :type amount: int
@@ -20,6 +29,9 @@ def coinChange(self, coins, amount):
         return dp[amount] if dp[amount] < amount + 1 else -1
 
 
+amount = 11
+coins = [1,2,5]
+print(coinChange(amount,coins))
 
 '''
 Output of amount = 11 and coins = [1,2,5]
