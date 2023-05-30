@@ -24,7 +24,6 @@ def reverseList(head):
 
 
 
-   
     
 '''
 We are keeping 3 pointer basically
