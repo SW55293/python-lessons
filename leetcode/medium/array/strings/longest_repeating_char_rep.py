@@ -1,4 +1,4 @@
-def characterReplacement(self, s, k):
+def characterReplacement(s, k):
         """
         :input type s: str
         :input type k: int
@@ -20,7 +20,7 @@ def characterReplacement(self, s, k):
             #This line updates the maximum frequency of any character to the maximum 
             #of the current maximum frequency and the count of the character at right.
             max_char_freq = max(max_char_freq, dict[s[right]])
-
+            print(dict.get(s[right])) #gets the value at that position
             #This condition checks if the substring from left to right has more than
             # k characters that appear more than once.
             if (right - left + 1) - max_char_freq > k:
@@ -35,3 +35,5 @@ def characterReplacement(self, s, k):
             #length and the length of the substring from left to right.
             longest_sub = max(longest_sub, right - left + 1)
         return longest_sub
+
+print("answer = ", characterReplacement("ABAB", 2))
