@@ -41,3 +41,44 @@ def pacificAtlantic(self, heights):
 
     # Return the intersection of cells reachable from both oceans
     return pacific & atlantic
+
+
+'''
+        #DFS(deep), BFS(side to side), union find, topological sort, Dijkstras 
+        # This one is probably a BFS (level to level)
+
+        rows = len(heights)
+        cols = len(heights[0])
+
+        pacific = set()
+        atlantic = set()
+
+        def dfs(r, c, visited, prev_height):
+            if ((r, c) in visited or
+                r not in range(rows) or
+                c not in range(cols) or
+                heights[r][c] < prev_height):
+                return     
+            visited.add((r,c))
+            dfs(r + 1, c, visited, heights[r][c])
+            dfs(r - 1, c, visited, heights[r][c])
+            dfs(r, c + 1, visited, heights[r][c])
+            dfs(r, c - 1, visited, heights[r][c])
+
+        for c in range(cols):
+            dfs(0, c, pacific, heights[0][c])
+            dfs(rows - 1, c, atlantic, heights[rows-1][c])
+        
+        for r in range(rows):
+            dfs(r, 0, pacific, heights[r][0])
+            dfs(r, cols-1, atlantic, heights[r][cols-1])
+
+        return pacific & atlantic
+
+
+# Time: O(m * n) where m and n are the dimensions of the grid
+# Space: O(m * n)
+
+
+
+'''
