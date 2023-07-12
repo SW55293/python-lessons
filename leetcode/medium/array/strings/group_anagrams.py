@@ -9,6 +9,9 @@ def groupAnagrams(strs):
         #we want to count the number of letters in each string
         #we're using a hashmap to keep track of the list of lists
 
+    # This line creates a defaultdict object called dict. The defaultdict object is initialized 
+    # with a list as the default factory. This means that if a key is not found in the dict object, 
+    # then a new list will be created for that key.
         groups = collections.defaultdict(list)
 
         for word in strs:
