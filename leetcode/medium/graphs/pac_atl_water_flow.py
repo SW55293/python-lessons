@@ -1,4 +1,4 @@
-def pacificAtlantic(self, heights):
+def pacificAtlantic(heights):
     # Get the number of rows and columns in the matrix
     rows = len(heights)
     cols = len(heights[0])
