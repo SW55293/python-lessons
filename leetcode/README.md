@@ -1,6 +1,11 @@
 Software Engineering Interview Practice
 ===
-
+Need to explain data structures in detail
+- Break them down
+- Understand the usual workarounds for each
+  - meaning what are the usual approaches for certain types of problems
+  - two pointer, sliding window, recursion, etc..
+ 
 ### Notes
 - Mutable
   - Objects
