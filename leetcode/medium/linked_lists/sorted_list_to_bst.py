@@ -25,9 +25,9 @@ class Solution(object):
         """
 
         #base case
-        if not head:
+        if not head:        #no nodes
             return None
-        if not head.next:
+        if not head.next:   #one node
             return TreeNode(head.val)
 
         # this finds the middle node and last node
@@ -40,7 +40,7 @@ class Solution(object):
 
         #temp pointer to root of bst
         temp = slow.next
-
+        #disconnect the root
         slow.next = None
 
         root = TreeNode(temp.val)
