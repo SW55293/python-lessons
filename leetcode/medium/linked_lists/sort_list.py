@@ -19,6 +19,7 @@ def sortList(head: Optional[ListNode]) -> Optional[ListNode]:
        
        root = ListNode(arr[0])
        curr = root
+       
        for val in arr[1:]:
            curr.next = ListNode(val)
            curr = curr.next
