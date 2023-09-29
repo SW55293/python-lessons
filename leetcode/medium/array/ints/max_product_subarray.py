@@ -1,5 +1,5 @@
 
-def maxProduct(self, nums):
+def maxProduct(nums):
     """
     :type nums: List[int]
     :rtype: int
