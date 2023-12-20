@@ -19,7 +19,7 @@ class Solution(object):
                 max_profit = max(max_profit, potential_profit)
             else:
                 buy = sell
-            sell = sell + 1 #this gave me an error when it was in the else block. Look for answer below
+            sell = sell + 1 #this gave me an error when it was in the else block. answer below
         return max_profit
 
 # Answer to the error:
