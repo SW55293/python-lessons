@@ -9,7 +9,7 @@ def binarySearch(arr: List[int], target: int) -> int:
 
         if arr[mid] is target:
             return mid, arr[mid] #index, value
-        elif mid < target:
+        elif arr[mid] < target:
             left = mid+1
         else:
             right = mid-1
