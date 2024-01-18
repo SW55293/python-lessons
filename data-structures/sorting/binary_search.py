@@ -2,7 +2,8 @@ from typing import List
 
 def binarySearch(arr: List[int], target: int) -> int:
     left = 0
-    right = len(arr) - 1
+    right = arr[-1]
+    # right = len(arr) - 1
 
     while left <= right:
         mid = (left+right) // 2
@@ -20,3 +21,6 @@ targ = 5
 
 exe = binarySearch(arr, targ)
 print(exe)
+
+
+
