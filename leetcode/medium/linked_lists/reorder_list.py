@@ -8,6 +8,9 @@ def reorderList(head):
         The slow pointer moves one node at a time, while the fast pointer moves two nodes at a time. When the fast pointer 
         reaches the end of the linked list, the slow pointer will be pointing to the middle node.
         '''
+        if not head or not head.next:
+            return 
+        
         # finds the middle and the last node
         slow = head 
         fast = head.next
@@ -17,14 +20,14 @@ def reorderList(head):
             fast = fast.next.next
 
         # Separates the 2 halfs 
-        start_of_second = slow.next
+        head_of_second = slow.next
         slow.next = None
         prev = None
-        while start_of_second:
-            temp = start_of_second.next
-            start_of_second.next = prev
-            prev = start_of_second
-            start_of_second = temp
+        while head_of_second:
+            temp = head_of_second.next
+            head_of_second.next = prev
+            prev = head_of_second
+            head_of_second = temp
 
         # Reverses the next pointers of the 2 halfs and shifts the nodes around 
         first = head
