@@ -1,9 +1,9 @@
-class Node:
+class Node(object):
     def __init__(self, val=None, next=None):
         self.val = val
         self.next = next
 
-class LinkedList(Node):
+class LinkedList(object):
     def __init__(self, head):
         self.head = head
 
@@ -20,7 +20,7 @@ class LinkedList(Node):
         while curr and curr.next: 
               curr = curr.next
         curr.next = new_node
-        
+
     
 
 
