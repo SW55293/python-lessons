@@ -14,12 +14,20 @@ class LinkedList(object):
                 temp = temp.next_node
             print("")
 
-    def addNode(self, new_node):
-        curr = self.head
+    def addNodeAtHead(self, new_node):
+        new_node.next = self.head
+        self.head = new_node
+    
+    def addNodeAtTail(self, new_node):
+         #just for example, you should already have the tail node known
+         #or call another function to get that tail node
+         tail = LinkedList()
+         new_node.next = None
+         tail.next = new_node
+         tail = new_node
 
-        while curr and curr.next: 
-              curr = curr.next
-        curr.next = new_node
+         
+        
 
     
 
