@@ -19,3 +19,20 @@ def isSameTree(p, q):
     
     # Recursive part checking the rest of the tree with the base cases given.. And go to left and right subtree.
     return (isSameTree(p.left, q.left) and isSameTree(p.right, q.right))
+
+def isSameTree(p, q):
+
+    if p is None and q is None:
+       return True 
+
+    if p is None or q is None: 
+        return False
+    
+    if p.val != q.val:
+        return False
+    
+    # Recursive part checking the rest of the tree with the base cases given.. And go to left and right subtree.
+    return (
+        isSameTree(p.left, q.left) 
+        and 
+        isSameTree(p.right, q.right))
