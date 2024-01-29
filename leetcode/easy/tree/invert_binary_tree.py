@@ -22,14 +22,13 @@ def invertTree(self, root):
         #children
         if root is None:
             return None
-
-        self.invertTree(root.left)
-        self.invertTree(root.right)
-
-
+        
         temp_left = root.left
         root.left = root.right
         root.right = temp_left
+
+        self.invertTree(root.left)
+        self.invertTree(root.right)
 
         return root
 

@@ -8,7 +8,7 @@ def add_to_head(self, new_value):
     current_head.set_prev_node(new_head)
     new_head.set_next_node(current_head)
   self.head_node = new_head
-  
+
   if self.tail_node == None:
     self.tail_node = new_head
 
