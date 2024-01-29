@@ -23,15 +23,17 @@ class Node:
             self.right.insert(val)
            
 
-# Print the tree
-   def printTree(self):
-      if self.left:
-         self.left.printTree()
-
+    # Print the tree
+   def PrintTree(self):
+      # if self.left is True, if theres a left subtree then print
       print(self.val)
+      if self.left:
+         self.left.PrintTree()
 
       if self.right:
-         self.right.printTree()
+         self.right.PrintTree()
+    
+
 
 #root is not part of the node class, you have to define it outside of the class
 root = Node(12)
@@ -41,4 +43,4 @@ root.insert(6) #root.left
 root.insert(14) #root.right
 root.insert(3) #root.left
 
-root.printTree()
+root.PrintTree()
