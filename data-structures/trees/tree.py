@@ -8,19 +8,18 @@ class Node:
 
     
 
-   def insert(self, val):
+   def insert(self, root, val):
+      #this places any node into an empyt null/none spot
+      if root is None:
+         root = Node(val)
+         return root
+      
       # If the value is less
-      if val < self.val:
-        if not self.left: # If there isnt a parent node, then create node of that val
-            self.left = Node(val)
-        else:
-            self.left.insert(val) # If the parent is present then insert
-
+      if val < root.val:
+            root.left = self.insert(root.left, val)
       else:
-        if not self.right:
-            self.right = Node(val)
-        else:
-            self.right.insert(val)
+            root.right = self.insert(root.right, val)
+      return root
            
 
     # Print the tree
