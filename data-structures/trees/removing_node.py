@@ -22,7 +22,7 @@ class Solution:
                 return root.left
         
         # get inorder successor from right side
-            successor = getSuccessor(root.right)
+            # successor = getSuccessor(root.right)
     
     def getSuccessor(right_val):
         current = right_val

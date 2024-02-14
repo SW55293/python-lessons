@@ -1,3 +1,5 @@
+# Binary Search Tree
+
 class Node:
     def __init__(self, val):
         self.val = val
@@ -21,7 +23,20 @@ class Node:
             self.inorder_traversal(root.left)
             print(root.val, end=" ")
             self.inorder_traversal(root.right)
+            # When you specify end=" ", you're telling print() to not add a newline character, 
+            # but instead to add a space character () at the end of the output.
+            # often used in situations like printing elements of a list or tree structure 
+            # where you want to display them on a single line, separated by spaces.
+   
+    def print_tree_ascii(self, root, level=0):
+        if root:
+            self.print_tree_ascii(root.right, level + 1)
+            print(" " * 4 * level + "--> " + str(root.val))
+            self.print_tree_ascii(root.left, level + 1)
 
+
+
+ 
 # Root is not part of the node class, you have to define it outside of the class
 root = Node(12)
 
@@ -32,7 +47,9 @@ root.insert(root, 3)  # root.left.left
 root.insert(root,18)
 
 root.inorder_traversal(root)
-
+print()
+print("---------------------")
+root.print_tree_ascii(root)
 
 
 
