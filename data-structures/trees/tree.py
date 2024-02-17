@@ -27,7 +27,21 @@ class Node:
             # but instead to add a space character () at the end of the output.
             # often used in situations like printing elements of a list or tree structure 
             # where you want to display them on a single line, separated by spaces.
-   
+
+    def search(self, value, node):
+        if node is None or node.val == value:
+            return node
+        
+        elif value < node.val:
+            self.search(value, node.left)
+        else:
+            value > node.val
+            self.search(value, node.right)
+
+
+
+
+#   Print The Tree 
     def print_tree_ascii(self, root, level=0):
         if root:
             self.print_tree_ascii(root.right, level + 1)
