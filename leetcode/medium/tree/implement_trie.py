@@ -1,5 +1,58 @@
 class TrieNode:
     def __init__(self):
+        self.children = {}
+        self.end = False
+
+class Trie:
+
+    def __init__(self):
+        self.root = TrieNode()
+
+    def insert(self, word: str) -> None:
+        # need to insert the letters of a word into the tree
+        # we create a pointer that points at the empty root node
+        # the empty root node will have 26 children. Alphabet a-z lowercase
+        current = self.root
+
+        for char in word:
+            if char not in current.children:  #if the character doesnt exist then create trienode
+                current.children[char] = TrieNode()
+            # if that character is there then move current to that character node
+            current = current.children[char]
+        # once all characters in word are inserted mark the last char as the end
+        current.end = True
+        
+
+    def search(self, word: str) -> bool:
+        current = self.root
+
+        for char in word:
+            if char not in current.children:
+                return False
+            current = current.children[char]
+        return current.end
+        
+
+    def startsWith(self, prefix: str) -> bool:
+        current = self.root
+
+        for char in prefix:
+            if char not in current.children:
+                return False
+            current = current.children[char]
+        return True
+        
+
+
+# Your Trie object will be instantiated and called as such:
+# obj = Trie()
+# obj.insert(word)
+# param_2 = obj.search(word)
+# param_3 = obj.startsWith(prefix)
+
+# ------------------------------------------------------
+class TrieNode:
+    def __init__(self):
         self.children = [None] * 26
         self.end = False
 

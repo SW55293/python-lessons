@@ -23,9 +23,9 @@ def invertTree(self, root):
         if root is None:
             return None
         
-        temp_left = root.left
+        temp = root.left
         root.left = root.right
-        root.right = temp_left
+        root.right = temp
 
         self.invertTree(root.left)
         self.invertTree(root.right)
