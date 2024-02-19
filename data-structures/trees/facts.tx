@@ -1,0 +1,6 @@
+The Binary Tree class will always contain the following:
+
+TreeNode class:
+1. value or data
+2. The left child
+3. The right child

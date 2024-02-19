@@ -22,6 +22,7 @@ class Solution:
             for _ in range(q_len):
                 node = queue.pop(0)  # Remove the first element from the queue
                 sublist.append(node.val)
+                
                 if node.left:
                     queue.append(node.left)
                 if node.right:

@@ -1,0 +1,10 @@
+Linked list class will need to have the following:
+
+First the Node class will only have 
+1. The data or value variable 
+2. The next pointer
+
+The Linked List class will have:
+3. The head pointer
+
+For a doubly linked list in the Node class you will add a previous pointer.
