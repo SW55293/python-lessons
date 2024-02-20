@@ -9,7 +9,7 @@ a) stacks are last-in-first-out.
 b) queues are first-in-first-out.
 '''
 class Iterative:
-# --------- In-Order --------- 
+# --------- In-Order --------- left -> root -> right
     def inorder_traversal_2(self, root):
         stack = []
         current = root
@@ -43,7 +43,7 @@ class Iterative:
 
         return output
 
-# --------- Pre-Order --------- 
+# --------- Pre-Order --------- root -> left -> right
     def preorder_traversal(self, root):
         stack = []
         current = root
@@ -71,12 +71,12 @@ class Iterative:
                 stack.append(node.left)
         return output
     
- # --------- Post-Order ---------    
+ # --------- Post-Order --------- left -> right -> root  
     def postorder_traversal(self, root):
         stack = []
         current = root
         last_visited = None
-    
+
         while stack or current:
             if current:
                 stack.append(current)
