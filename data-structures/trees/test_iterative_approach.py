@@ -108,14 +108,27 @@ class Iterative:
 
 
 
-root = TreeNode(20)
-root.left = TreeNode(15)
-root.left.left = TreeNode(5)
-root.left.right = TreeNode(10)
-root.right = TreeNode(30)
-root.right.left = TreeNode(25)
-root.right.right = TreeNode(40)
+# root = TreeNode(20)
+# root.left = TreeNode(15)
+# root.left.left = TreeNode(5)
+# root.left.right = TreeNode(10)
+# root.right = TreeNode(30)
+# root.right.left = TreeNode(25)
+# root.right.right = TreeNode(40)
+
+# iterative = Iterative()
+# start = iterative.inorder_traversal_2(root)
+# print(start)
+
+
+root = TreeNode(10)
+root.left = TreeNode(5)
+root.left.left = TreeNode(4)
+root.left.right = TreeNode(6)
+root.right = TreeNode(15)
+root.right.left = TreeNode(14)
+root.right.right = TreeNode(18)
 
 iterative = Iterative()
-start = iterative.inorder_traversal_2(root)
+start = iterative.preorder_traversal(root)
 print(start)
