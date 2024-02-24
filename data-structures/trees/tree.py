@@ -38,6 +38,11 @@ class Node:
             value > node.val
             self.search(value, node.right)
 
+    def count_nodes(self, root):
+        if root is None:
+          return 0
+
+        return 1 + self.count_nodes(root.left) + self.count_nodes(root.right)
 
 
 
@@ -59,11 +64,14 @@ root.insert(root, 6)  # root.left
 root.insert(root, 14)  # root.right
 root.insert(root, 3)  # root.left.left
 root.insert(root,18)
+root.insert(root,100)
 
-root.inorder_traversal(root)
+# root.inorder_traversal(root)
 print()
 print("---------------------")
-root.print_tree_ascii(root)
+# root.print_tree_ascii(root)
+
+print(root.count_nodes(root))
 
 
 
