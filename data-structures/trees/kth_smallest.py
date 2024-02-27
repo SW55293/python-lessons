@@ -13,6 +13,9 @@ class TreeNode:
             print(" " * 4 * level + "--> " + str(root.val))
             self.print_tree_ascii(root.left, level + 1)
 
+# We want to place values in an array and sort them, from there we want to
+# return the index kth value. The indices start from 1 and not 0
+# Ex: arr=10,2,35,11 k=3, we return index 3 which is value 35
 
 class Solution:
     def kthSmallest(self, root: TreeNode, k: int) -> int:
