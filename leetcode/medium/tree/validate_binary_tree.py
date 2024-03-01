@@ -83,6 +83,21 @@ class Solution:
         
         return self.checkBST(node.left, left_val, node.val) and self.checkBST(node.right, node.val, right_val)
     
+    # --------- Option 2 ---------
+    def isValid_2(self, root: Optional[TreeNode]) -> bool:
+
+        def checkBST(root, min_val = float('-inf'), max_val = float('inf')):
+            if root is None:
+                return True
+            
+            if not (min_val < root.val < max_val):
+                return False
+            
+            return checkBST(root.left, min_val, root.val) and checkBST(root.right, root.val, max_val)
+        
+        return checkBST(root)
+
+    
 
 # Test case 1: A valid BST
 root = TreeNode(20)

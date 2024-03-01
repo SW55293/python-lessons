@@ -21,7 +21,6 @@ class Solution:
             
             if r is None or s is None:
                 return False
-
             if r.val != s.val:
                 return False
 
