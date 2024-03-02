@@ -13,6 +13,11 @@ class TreeNode:
             print(" " * 4 * level + "--> " + str(root.val))
             self.print_tree_ascii(root.left, level + 1)
 
+# We want to find the kth smallest value. So we place values in a stack and decrememnt 
+# the k's value as we go down the tree on the left side.
+# The root has an index of 1 and the indices continue in order from left to right.
+# You will process None leaf nodes, they will trigger the pop's
+# Ex: arr=10,2,35,11 k=3, we return index 3 which is value 35
 
 class Solution:
     def kthSmallest(self, root: TreeNode, k: int) -> int:
@@ -58,10 +63,34 @@ def inOrderTraversalIterative(root):
 
 
 # Example usage
-root = TreeNode(5, TreeNode(3, TreeNode(2), TreeNode(4)), TreeNode(7, TreeNode(6), TreeNode(8)))
-# k = 3
-# result = Solution().kthSmallest(root, k)
-# print(result)  # Output: 4
+root = TreeNode(10, TreeNode(2,TreeNode(1), TreeNode(3)), TreeNode(35, TreeNode(11), TreeNode(40)))
+k = 4
+result = Solution().kthSmallest(root, k)
+print(result) 
 # result = inOrderTraversalIterative(root)
 # print(result)
 root.print_tree_ascii(root)
+
+# commented code 
+def kthSmallest(self, root: TreeNode, k: int) -> int:
+    # Initialize an empty stack for simulating tree traversal 
+    stack = []  
+    # Start with the root node
+    curr = root
+
+    while curr or stack:  # Continue until we've exhausted all nodes 
+        # Traverse left subtree until reaching a leaf node
+        while curr: 
+            stack.append(curr)   # Keep track of nodes as we go down
+            curr = curr.left
+
+        # Visit the leaf node (kth smallest element if count matches k)
+        curr = stack.pop()   # Backtrack to the most recent node
+        k = k - 1            # Decrement count ('k' elements visited so far)
+        if k == 0:           # Did we find the 'k'th smallest?
+            return curr.val  # Return the value
+
+        # Traverse right subtree
+        curr = curr.right    # Explore the right children of the current node
+
+    return None  # If the tree didn't have 'k' elements

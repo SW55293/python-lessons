@@ -1,0 +1,50 @@
+The Binary Tree class will always contain the following:
+
+TreeNode class:
+1. value or data
+2. The left child
+3. The right child
+
+
+
+===
+If statement differences between a common used check:
+
+The two `if` statements you've mentioned are used to check conditions in Python, but they do so in slightly different
+ways. Both are often used interchangeably in contexts where the distinction between `None` and other "falsy" values 
+(like `False`, `0`, `[]`, `{}`, `''`, etc.) does not matter. However, there are scenarios where the difference becomes 
+significant. Let's break them down:
+
+### `if not root:`
+
+This statement checks if `root` is "falsy". In Python, several values are considered "falsy", including:
+
+- `None`
+- `False`
+- `0` (zero, of any numeric type)
+- `[]` (empty list)
+- `{}` (empty dictionary)
+- `''` (empty string)
+- any empty collection or sequence
+- custom classes that implement the `__bool__()` or `__len__()` methods to return `False` or `0`, respectively
+
+So, this condition will be `True` (and the code inside the `if` block will execute) not only if `root` is `None`, but 
+also if `root` is any of the above "falsy" values.
+
+### `if root is None:`
+
+This statement explicitly checks if `root` is `None`. It's a strict comparison that only evaluates to `True` if `root` 
+is exactly `None`. It does not consider any other "falsy" value as equivalent to `None`. This is more precise when you 
+specifically want to check for `None` and not just any "falsy" value.
+
+### Summary
+
+- Use `if not root:` when you want to execute some code for any "falsy" value of `root`. It's a broader check that 
+includes `None`, but also empty sequences, zero values, and `False`.
+- Use `if root is None:` when you need to specifically check for `None`, and you do not want to treat other "falsy" 
+values the same way as `None`.
+
+In the context of checking if a binary tree node exists (`root` in tree traversal algorithms), `if root is None:` 
+is more semantically correct if you're only interested in whether the node is actually `None` (i.e., does not exist). 
+However, in many cases, especially in simple tree traversal functions, the distinction does not affect the outcome, 
+so either form could be used without changing the behavior of the function.
