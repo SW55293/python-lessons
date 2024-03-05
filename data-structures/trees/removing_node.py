@@ -1,4 +1,4 @@
-from typing import Optional
+
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -30,16 +30,17 @@ class Solution:
             current = current.left
         return current.val
 
-        ''' Cases
-        - No nodes in tree
-        - The value isnt in the tree
-        - Node to delete has only 1 child
-            - Has only left child
-            - Has only right child
-        - Node to delete has 2 children
-        '''
+
 root = TreeNode(10)
 
 root.left = TreeNode(9)
 root.left.left = TreeNode(8)
 root.right = TreeNode(15)
+''' Cases
+ - No nodes in tree
+ - The value isnt in the tree
+ - Node to delete has only 1 child
+     - Has only left child
+     - Has only right child
+ - Node to delete has 2 children
+'''
