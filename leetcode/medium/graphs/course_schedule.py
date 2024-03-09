@@ -16,7 +16,18 @@ Return type = Int List
 
 def canFinish(numCourses, prerequisites):
 
-     # dfs
+# dictionary = {key: value for vars in iterable}
+# dict = {<new_key>:<new_value> for <item> in <iterable>}
+    
+# Keys: n for n in range(numCourses) - This part iterates through a range of 
+# numbers from 0 up to (but not including) the value of numCourses. Each value of n becomes a key in the dictionary.
+# Values: [] - For each key (n), the corresponding value is an empty list [].
+# mapped = {
+#    0: [],
+#    1: [],
+#    2: []
+#}
+
     mapped = {n: [] for n in range(numCourses)}
     # map each course to : prereq list as we go through
     for course, pre_req in prerequisites:
@@ -31,9 +42,9 @@ def canFinish(numCourses, prerequisites):
             return True
         #add course to visited list
         visited.add(crse)
-        for cla_ss in mapped[crse]:
+        for prereq in mapped[crse]:
             #if we didnt find the course in our map
-            if not dfs(cla_ss):
+            if not dfs(prereq):
                 return False
                 
         visited.remove(crse)

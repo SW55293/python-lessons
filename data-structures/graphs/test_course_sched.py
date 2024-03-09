@@ -1,5 +1,5 @@
-from ast import List
-
+from typing import List
+# import dis
 
 class Node:
     def __init__(self, val = 0, neighbors = None) -> None:
@@ -37,8 +37,30 @@ class Solution:
             if not dfs(c):
                 return False
         return True
+    # dis.dis(canFinish)
+
+def test_node_initialization():
+    node = Node(5, [2, 3])  # Course 5 with prerequisites 2 and 3
+    assert node.val == 5
+    assert node.neighbors == [2, 3]
+
+entry_node = Node()
+courses = entry_node.val = 4
+prereqs = entry_node.neighbors = [(1, 0), (2, 0), (3, 1), (3, 2)]
+solution = Solution()
+start = solution.canFinish(courses, prereqs)
+print(start)
 
 
+
+
+
+
+
+
+
+
+''' 
 
 # Definition of a simple Node class, which appears to be unused in the solution.
 class Node:
@@ -84,3 +106,22 @@ class Solution:
             if not dfs(c):  # If DFS from a course returns False, not all courses can be completed.
                 return False
         return True  # All courses can be completed if no cycles are detected.
+
+ def test_dfs_no_cycle():
+    mapped = {0: [], 1: [0]}  # Course 1 depends on course 0
+    assert Solution().dfs(1) == True
+
+def test_dfs_cycle():
+    mapped = {0: [1], 1: [0]}  # Course 0 depends on 1 and vice versa (cycle)
+    assert Solution().dfs(0) == False
+
+def test_can_finish_no_cycle():
+    prerequisites = [[1, 0], [2, 1]]
+    assert Solution().canFinish(3, prerequisites) == True
+
+def test_can_finish_with_cycle():
+    prerequisites = [[1, 0], [0, 1]]
+    assert Solution().canFinish(2, prerequisites) == False
+
+       
+'''

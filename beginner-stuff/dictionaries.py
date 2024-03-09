@@ -19,10 +19,10 @@ dict_example = dict(
 )
 
 #return the persons name for given color.. the color is the key
-#so you have to give it a color or you'lll get and error
+#so you have to give it a color or you'll get and error
 print(colors["blue"])
 
-#check to see if a certaib key value is in the dictionary
+#check to see if a certain key value is in the dictionary
 #this is asking. Is the key Stephen in the colors dictionary
 print('Stephen' in colors)
 
