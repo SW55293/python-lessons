@@ -3,21 +3,26 @@ from typing import List
 class Solution:
     def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
         rows = len(heights)
-        cols = len(heights[0])
+        columns = len(heights[0])
         pcf = set()
         atl = set()
 
         # r = row coordinate, c = col coordinate
         def dfs(r, c, visited, prevHeight):
+            
+            # print('visited = ', type(visited))
+            # print('heights = ', heights[r][c])
+            # print(f'[r][c] = [{r}][{c}]')
+            # print()
             if (
                 (r, c) in visited
                 or r < 0
                 or c < 0
                 or r == rows
-                or c == cols
+                or c == columns
                 or heights[r][c] < prevHeight
             ): return
-
+            print(f"Cell: ({r}, {c}), Height: {heights[r][c]}") 
             visited.add((r, c))
             dfs(r + 1, c, visited, heights[r][c])
             dfs(r - 1, c, visited, heights[r][c])
@@ -25,21 +30,22 @@ class Solution:
             dfs(r, c - 1, visited, heights[r][c])
 
         
-        for c in range(cols):
-            dfs(0, c, pcf, heights[0][c])
-            dfs(rows - 1, c, atl, heights[rows - 1][c])
+        for cl in range(columns):
+            dfs(0, cl, pcf, heights[0][cl]) # Top edge -> Pacific
+            dfs(rows - 1, cl, atl, heights[rows - 1][cl]) # Bottom edge -> Atlantic
 
         
-        for r in range(rows):
-            dfs(r, 0, pcf, heights[r][0])
-            dfs(r, cols - 1, atl, heights[r][cols - 1])
+        for rw in range(rows):
+            dfs(rw, 0, pcf, heights[rw][0]) # Left edge -> Pacific
+            dfs(rw, columns - 1, atl, heights[rw][columns - 1]) # Right edge -> Atlantic
 
         
         res = []
         for r in range(rows):
-            for c in range(cols):
+            for c in range(columns):
                 if (r, c) in pcf and (r, c) in atl:
                     res.append([r, c])
+                    print(f"Cell: ({r}, {c}), Height: {heights[r][c]}")  # Print coordinates and height
         return res
     
 
@@ -53,7 +59,3 @@ sol.pacificAtlantic(heights)
 print(sol)
 
 
-# r + 1 = going to the right
-# r - 1 = going to the left
-# c + 1 = going up
-# c - 1 = going down
