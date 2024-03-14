@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def pacificAtlantic(self, heights: List[List[int]]) -> List[List[int]]:
         rows = len(heights)
@@ -9,37 +10,35 @@ class Solution:
 
         # r = row coordinate, c = col coordinate
         def dfs(r, c, visited, prevHeight):
-            
+
             # print('visited = ', type(visited))
             # print('heights = ', heights[r][c])
             # print(f'[r][c] = [{r}][{c}]')
             # print()
             if (
-                (r, c) in visited
-                or r < 0
-                or c < 0
-                or r == rows
-                or c == columns
-                or heights[r][c] < prevHeight
+                    (r, c) in visited
+                    or r < 0
+                    or c < 0
+                    or r == rows
+                    or c == columns
+                    or heights[r][c] < prevHeight
             ): return
-            print(f"Cell: ({r}, {c}), Height: {heights[r][c]}") 
+            # print(f"Cell: ({r}, {c}), Height: {heights[r][c]}")
+            heights[r][c]
             visited.add((r, c))
             dfs(r + 1, c, visited, heights[r][c])
             dfs(r - 1, c, visited, heights[r][c])
             dfs(r, c + 1, visited, heights[r][c])
             dfs(r, c - 1, visited, heights[r][c])
 
-        
         for cl in range(columns):
-            dfs(0, cl, pcf, heights[0][cl]) # Top edge -> Pacific
-            dfs(rows - 1, cl, atl, heights[rows - 1][cl]) # Bottom edge -> Atlantic
+            dfs(0, cl, pcf, heights[0][cl])  # Top edge -> Pacific
+            dfs(rows - 1, cl, atl, heights[rows - 1][cl])  # Bottom edge -> Atlantic
 
-        
         for rw in range(rows):
-            dfs(rw, 0, pcf, heights[rw][0]) # Left edge -> Pacific
-            dfs(rw, columns - 1, atl, heights[rw][columns - 1]) # Right edge -> Atlantic
+            dfs(rw, 0, pcf, heights[rw][0])  # Left edge -> Pacific
+            dfs(rw, columns - 1, atl, heights[rw][columns - 1])  # Right edge -> Atlantic
 
-        
         res = []
         for r in range(rows):
             for c in range(columns):
@@ -47,15 +46,13 @@ class Solution:
                     res.append([r, c])
                     print(f"Cell: ({r}, {c}), Height: {heights[r][c]}")  # Print coordinates and height
         return res
-    
+
 
 heights = [
-    [1,2,2,3],
-    [3,2,3,4],
-    [2,4,5,3]]
+    [1, 2, 2, 3],
+    [3, 2, 3, 4],
+    [2, 4, 5, 3]]
 
 sol = Solution()
 sol.pacificAtlantic(heights)
 print(sol)
-
-
