@@ -17,14 +17,15 @@ class Solution:
             # print()
             if (
                     (r, c) in visited
+                    or heights[r][c] < prevHeight
                     or r < 0
                     or c < 0
                     or r == rows
                     or c == columns
-                    or heights[r][c] < prevHeight
+                    
             ): return
             # print(f"Cell: ({r}, {c}), Height: {heights[r][c]}")
-            heights[r][c]
+            heights[r][c] #used to keep track of the value in the cell while debugging
             visited.add((r, c))
             dfs(r + 1, c, visited, heights[r][c])
             dfs(r - 1, c, visited, heights[r][c])
