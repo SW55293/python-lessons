@@ -18,11 +18,14 @@ class Solution:
             if target - nums[n] in dict:
                 return [dict[target - nums[n], n]]
             dict[nums[n]] = n
+        
 
     
 sol = Solution()
 
-nums = [2, 3, 9 ,5 ,6 ,7, 10]
-target = 12
+# nums = [2, 3, 9 ,5 ,6 ,7, 10]
+# target = 12
+nums = []
+target = 10
 
-sol.twoSum(nums, target)
+print(sol.twoSum(nums, target))
