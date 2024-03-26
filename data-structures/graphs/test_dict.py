@@ -35,6 +35,7 @@ def test_graph():
     print(mapped.keys())
     print(mapped.values())
     print()
+    # enumerate(iterable, start)
     for c, p in enumerate(prerequisites):
         print(c,p)
     print()
