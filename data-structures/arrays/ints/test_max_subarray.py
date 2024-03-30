@@ -43,15 +43,13 @@ class Solution:
         # Iterate through each number in the array
         for n in nums:
             # Calculate the temporary maximum product considering the current maximum product
-            tmp = curMax * n
+            temp_max = curMax * n
+            temp_min = curMin * n
             
-            # Update the current maximum product:
-            # 1. Take the maximum of the three possibilities: n, n * curMax, n * curMin
-            curMax = max(n * curMax, n * curMin, n)
-            
-            # Update the current minimum product:
-            # 1. Take the minimum of the three possibilities: tmp, n * curMin, n
-            curMin = min(tmp, n * curMin, n)
+
+            curMax = max(temp_max, temp_min, n)
+
+            curMin = min(temp_max, temp_min, n)
             
             # Update the result with the maximum of the current maximum product and the result
             res = max(res, curMax)
