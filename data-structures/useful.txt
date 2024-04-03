@@ -1,0 +1,7 @@
+List Comprehensions:
+
+>>> names = ["steph", "potato", "tomato", "turd"]
+>>> dict = {name:len(names) for name in names}
+>>> dict
+
+{'steph': 4, 'potato': 4, 'tomato': 4, 'turd': 4}
