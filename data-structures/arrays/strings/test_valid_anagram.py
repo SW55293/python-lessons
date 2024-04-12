@@ -20,3 +20,13 @@ sol = Solution()
 s = "things"
 t = "phings"
 print(sol.isAnagram(s,t))
+
+
+def isAnagram2(self, s: str, t: str) -> bool:
+    s = sorted(s)
+    t = sorted(t)
+
+    if s == t:
+        return True
+    else:
+        return False
