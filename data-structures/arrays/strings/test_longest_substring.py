@@ -50,4 +50,47 @@ print(sol.lengthOfLongestSubstring(s))
        
 
 
-        
+class Solution:
+    def longestPalindrome(self, s: str) -> str:
+ 
+        def expandAroundCenter(left: int, right: int) -> str:
+            while left >= 0 and right < len(s) and s[left] == s[right]:
+                left -= 1
+                right += 1
+            return s[left + 1 : right]
+
+        longest = ""
+        for i in range(len(s)):
+            # Odd length palindrome
+            odd = expandAroundCenter(i, i)
+
+            # Even length palindrome
+            even = expandAroundCenter(i, i + 1)
+
+            if len(odd) > len(longest):
+                longest = odd
+
+            if len(even) > len(longest):
+                longest = even
+
+        return longest
+def longest_palindrome(s: str) -> str:  # Renamed for clarity
+    longest = ""
+    for i in range(len(s)):
+        # Odd length palindrome
+        left, right = i, i
+        while left >= 0 and right < len(s) and s[left] == s[right]:
+            if right - left + 1 > len(longest):  # Check length directly
+                longest = s[left : right + 1]
+            left -= 1
+            right += 1
+
+        # Even length palindrome
+        left, right = i, i + 1
+        while left >= 0 and right < len(s) and s[left] == s[right]:
+            if right - left + 1 > len(longest):  # Check length directly
+                longest = s[left : right + 1]
+            left -= 1
+            right += 1
+
+    return longest
