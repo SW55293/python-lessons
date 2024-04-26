@@ -1,3 +1,5 @@
+# Two pointers start at the same position for odd and even gets 1 pointer at 1 point ahead. 
+# we then move the pointers opposite directions and compare if the are the same char
 
 class Solution:
     def longestPalindrome(self, s: str) -> str:
@@ -8,7 +10,7 @@ class Solution:
                 left -= 1
                 right += 1
             return s[left + 1: right]
-
+# returning a range between s
         for x in range(len(s)):
             # odd length
             odd = find_longest(x,x)
@@ -26,7 +28,7 @@ class Solution:
 
 
 sol = Solution()
-s = "cbbd"
+s = "babad"
 print(sol.longestPalindrome(s))
 
 
