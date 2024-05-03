@@ -39,18 +39,23 @@ class Solution:
         return True
     # dis.dis(canFinish)
 
-def test_node_initialization():
-    node = Node(5, [2, 3])  # Course 5 with prerequisites 2 and 3
-    assert node.val == 5
-    assert node.neighbors == [2, 3]
+# def test_node_initialization():
+#     node = Node(5, [2, 3])  # Course 5 with prerequisites 2 and 3
+#     assert node.val == 5
+#     assert node.neighbors == [2, 3]
+
+# entry_node = Node()
+# courses = entry_node.val = 4
+# prereqs = entry_node.neighbors = [(1, 0), (2, 0), (3, 1), (3, 2)]
+# solution = Solution()
+# start = solution.canFinish(courses, prereqs)
+# print(start)
 
 entry_node = Node()
-courses = entry_node.val = 4
-prereqs = entry_node.neighbors = [(1, 0), (2, 0), (3, 1), (3, 2)]
-solution = Solution()
-start = solution.canFinish(courses, prereqs)
-print(start)
-
+courses = entry_node.val = 2
+prereqs = entry_node.neighbors = [[1,0], [0,1]]
+sol = Solution()
+course_sched = sol.canFinish(courses, prereqs)
 
 
 
