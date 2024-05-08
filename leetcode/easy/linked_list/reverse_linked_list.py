@@ -14,12 +14,12 @@ def reverseList(head):
     # Run a loop till curr points to NULL
     while curr:
         # Initialize next pointer as the next pointer of curr
-        temp_next = curr.next
+        temp = curr.next
         # Assign curr.next to what prev current value is
         curr.next = prev
         # Assign curr to prev, next to curr
         prev = curr
-        curr = temp_next
+        curr = temp
     return prev       # Return the prev pointer to get the reverse linked list
 
 
