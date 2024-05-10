@@ -1,10 +1,4 @@
-# Pattern          = Mod and Bit shift
-# Time Complexity  = O(n)
-# Space Complexity = O(1)
-"""
-Input1 = Bit Integer
-Return type = Integer
-"""
+
 def merge(intervals):
         """
         :type intervals: List[List[int]]
