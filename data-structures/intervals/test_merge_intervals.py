@@ -4,8 +4,17 @@ class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
         #sort by the start value
 
-        intervals.sort()
+        intervals.sort(key = lambda i: i[0])
+        merged = [intervals[0]]
 
+        for start, end in intervals[1:]:
+            lst_indx_time = merged[-1][1]
+
+            if start <= lst_indx_time:
+                merged[-1][1] = max(lst_indx_time, end)
+            else:
+                merged.append([start,end])
+        return merged
 
 
 
