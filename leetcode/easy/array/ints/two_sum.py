@@ -19,7 +19,7 @@ def twoSum_ex1(nums, target):
 list_of_numbers = [2, 11, 15,7]
 target_number = 9
 
-print(twoSum_ex1(list_of_numbers, target_number))
+# print(twoSum_ex1(list_of_numbers, target_number))
 
 '''
 Here's a breakdown of its components:
